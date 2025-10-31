@@ -75,7 +75,14 @@ body{
 }
 
 /* ====== Works (cards 1-col su mobile) ====== */
-.works{ padding-top:36px }
+.works{ padding-top:12px }
+.works .eyebrow{ margin-bottom:8px }
+
+@media (min-width:1024px){
+  .works{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px }
+  .works .eyebrow{ grid-column:1/-1; margin-bottom:6px }
+  .card{ margin:0 }
+}
 .card{
   position:relative;
   display:block; text-decoration:none;
