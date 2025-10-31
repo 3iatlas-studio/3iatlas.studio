@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="90" viewBox="0 0 840 260">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="260" viewBox="0 0 840 260">
   <rect width="840" height="260" fill="#0E1538"/>
-  <g font-family="Space Grotesk, Inter, Arial, sans-serif" fill="#D9B26D">
+  <g font-family="Inter, Arial, sans-serif" fill="#D9B26D">
     <text x="60" y="140" font-size="120" letter-spacing="2">3I ATLAS</text>
     <text x="62" y="200" font-size="58" letter-spacing="8">STUDIO</text>
   </g>
