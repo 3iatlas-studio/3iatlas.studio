@@ -87,13 +87,14 @@ body{
   transition:transform .2s ease, opacity .2s ease;
 }
 .card__thumb{
-  /* 4:5 aspect ratio senza immagini (placeholder aurora) */
   aspect-ratio:4/5; width:100%;
   background:
-    radial-gradient(45% 45% at 50% 45%, rgba(27,39,95,.45), rgba(27,39,95,0) 60%),
-    linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
-  border-radius:calc(var(--radius) - 1px);
-  position:relative;
+    radial-gradient(45% 45% at 50% 45%, rgba(27,39,95,.35), rgba(27,39,95,0) 60%),
+    var(--thumb, none);
+  background-image: var(--thumb, none);
+  background-size: cover;
+  background-position: center;
+  border-radius:17px;
 }
 .card::before{
   /* cornice oro sottile */
