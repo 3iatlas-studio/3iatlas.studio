@@ -71,6 +71,7 @@ body{
 }
 .logo-mark::before,
 .logo-mark::after{
+  transform: rotate(-25deg);
   content:"";
   position:absolute;
   left:-10px;
