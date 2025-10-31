@@ -149,8 +149,13 @@ body{
     height: 26px;
   }
 
-  .logo-mark::before,
+  .logo-mark::before {
+    top: 15px;
+    right: -8px;
+  }
   .logo-mark::after {
+    top: 15px;
+    right: -8px;
     transform: rotate(-25deg); /* mantiene l’inclinazione */
   }
 
