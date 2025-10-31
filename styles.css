@@ -74,16 +74,16 @@ body{
   transform: rotate(-25deg);
   content:"";
   position:absolute;
-  left:-10px;
-  top:10px;
+  left:-11px;
+  top:9px;
   width:14px;
-  height:4px;
+  height:3px;
   border-radius:2px;
   background:var(--gold);
   box-shadow:0 0 10px rgba(217,178,109,.8);
 }
 .logo-mark::after{
-  top:14px;
+  top:12px;
   width:9px;
   left:-6px;
   opacity:.85;
