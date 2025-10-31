@@ -4,97 +4,115 @@
   --cosmic-top:#070B1B;
   --gold:#D9B26D;
   --moon:#F5F5F7;
-  --muted:rgba(255,255,255,.75);
+  --muted:rgba(255,255,255,.78);
+  --content-max:1100px;
   --radius:12px;
-  --content-max:1100px;   /* max larghezza griglia works */
 }
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  color:var(--moon);
-  background:var(--cosmic);
+  color:var(--moon); background:var(--cosmic);
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
 
-/* ===== HERO (estetica mockup) ===== */
+/* ===== HERO (replica mockup) ===== */
 .hero{
+  position:relative;
   min-height:62vh;
   display:flex; align-items:center; justify-content:center;
-  padding:28px 16px 16px;
-  text-align:center; position:relative; overflow:hidden;
+  padding:28px 16px 20px;
+  text-align:center; overflow:hidden;
+}
+
+/* background: immagine + velature cinematiche */
+.hero__bg{
+  position:absolute; inset:0;
   background:
-    url('hero-mobile.jpg') center 22% / cover no-repeat,
+    url('hero-mobile.jpg') center 22%/cover no-repeat,
     radial-gradient(60% 45% at 72% 32%, rgba(41,64,110,.48) 0%, rgba(14,21,56,0) 70%),
     radial-gradient(60% 50% at 28% 78%, rgba(33,52,88,.32) 0%, rgba(14,21,56,0) 80%),
     linear-gradient(180deg, var(--cosmic-top), var(--cosmic));
+  z-index:0;
 }
-.hero__inner{ width:100%; max-width:var(--content-max); margin-inline:auto }
+.hero__inner{ position:relative; z-index:1; width:100%; max-width:var(--content-max); }
 
-/* Logo tipografico oro */
-.logo{ margin:0 0 8px }
+/* LOGO grande oro + orbitina luminosa */
+.logo{ margin:0 0 12px }
 .logo-main{
-  display:block; color:var(--gold); font-weight:800; letter-spacing:.06em;
-  font-size:clamp(32px,8vw,72px); line-height:1;
+  position:relative;
+  display:inline-block;
+  color:var(--gold);
+  font-weight:800;
+  letter-spacing:.06em;
+  font-size:clamp(36px,9vw,76px);
+  line-height:1;
 }
 .logo-sub{
-  display:block; margin-top:10px; color:var(--gold); font-weight:800;
-  font-size:clamp(12px,2.4vw,18px);
+  color:var(--gold);
+  font-weight:800;
+  margin-top:10px;
+  font-size:clamp(13px,2.6vw,20px);
   letter-spacing:.6em; text-indent:.6em;
 }
+
+/* piccolo globo/orbita accanto alla A */
+.logo-mark{
+  position:absolute;
+  right:-16px; top:-6px;
+  width:24px; height:24px;
+  border:3px solid var(--gold);
+  border-radius:50%;
+  filter:drop-shadow(0 0 6px rgba(217,178,109,.55));
+}
+.logo-mark::before,
+.logo-mark::after{
+  content:"";
+  position:absolute; left:-10px; top:10px;
+  width:14px; height:4px; border-radius:2px;
+  background:var(--gold);
+  box-shadow:0 0 10px rgba(217,178,109,.8);
+}
+.logo-mark::after{ top:14px; width:9px; left:-6px; opacity:.85 }
+
+/* Tagline */
 .hero__title{
-  margin:18px auto 0;
-  max-width:720px;
-  font-size:clamp(18px,3.6vw,24px);
+  margin:20px auto 0;
+  max-width:760px;
+  font-size:clamp(18px,3.8vw,26px);
   line-height:1.35; font-weight:600;
 }
-.hero__title span{ color:var(--gold); font-weight:800 }
+.hero__highlight{ color:#EAECEF } /* nel mockup la tagline è bianca */
 
-/* ===== Sections ===== */
+/* ===== Sections generiche ===== */
 .section{ padding:16px }
 .eyebrow{
   text-align:center; letter-spacing:.28em;
   font-size:11px; color:var(--muted);
   text-transform:uppercase; margin:0 0 10px;
 }
-.lead{
-  margin:0; text-align:center; font-size:15.5px; line-height:1.6; opacity:.95;
-}
+.lead{ margin:0; text-align:center; font-size:15.5px; line-height:1.6; opacity:.95 }
 
-/* ===== Works grid (3 colonne SEMPRE, come mockup) ===== */
+/* ===== Works grid (3 colonne anche su smartphone, come immagine mockup) ===== */
 .works{ padding-top:8px }
 .works-grid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:16px;
-  max-width:var(--content-max);
-  margin:0 auto;
-  padding:0 12px;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+  max-width:var(--content-max); margin:0 auto; padding:0 12px;
 }
-
-/* Card pulita: nessun bordo, solo immagine arrotondata */
-.card{
-  display:block; text-decoration:none; border:0; background:transparent; margin:0;
-}
+.card{ display:block; text-decoration:none; background:transparent; border:0; margin:0 }
 .card__thumb{
-  aspect-ratio:4/5;
-  width:100%;
-  background-size:cover;
-  background-position:center;
+  aspect-ratio:4/5; width:100%;
+  background-size:cover; background-position:center;
   border-radius:var(--radius);
 }
 
 /* ===== Footer ===== */
-.footer{
-  text-align:center; font-size:12px; opacity:.7;
-  padding:24px 16px 28px;
-}
+.footer{ text-align:center; font-size:12px; opacity:.7; padding:24px 16px 28px }
 
-/* ===== Desktop enhancements ===== */
+/* ===== Desktop fine-tuning ===== */
 @media (min-width:1024px){
   .hero{ min-height:64vh }
-  .hero__title{ font-size:clamp(22px,3.2vw,28px) }
-  .lead{ font-size:17px }
+  .hero__title{ font-size:clamp(22px,3.2vw,30px) }
   .works-grid{ gap:22px; padding:0 20px }
 }
