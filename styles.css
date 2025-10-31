@@ -23,14 +23,14 @@ body{
 
 /* ====== HERO (mobile-first) ====== */
 .hero{
-  min-height:70vh;
+  min-height:52vh;
   display:flex; align-items:center; justify-content:center;
-  padding:56px 20px 40px;
-  text-align:center;
-  position:relative; overflow:hidden;
+  padding:28px 16px 16px;
+  text-align:center; position:relative; overflow:hidden;
   background:
-    radial-gradient(60% 45% at 72% 32%, rgba(41,64,110,.55) 0%, rgba(14,21,56,0) 70%),
-    radial-gradient(60% 50% at 28% 78%, rgba(33,52,88,.35) 0%, rgba(14,21,56,0) 80%),
+    url('hero-mobile.jpg') center 20% / cover no-repeat,
+    radial-gradient(60% 45% at 72% 32%, rgba(41,64,110,.48) 0%, rgba(14,21,56,0) 70%),
+    radial-gradient(60% 50% at 28% 78%, rgba(33,52,88,.32) 0%, rgba(14,21,56,0) 80%),
     linear-gradient(180deg, var(--cosmic-top), var(--cosmic));
 }
 .hero::after{
