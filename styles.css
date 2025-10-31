@@ -60,8 +60,8 @@ body{
 /* piccolo globo/orbita sopra la A */
 .logo-mark{
   position:absolute;
-  right:190px;     /* distanza da destra per allinearsi alla A */
-  top:-38px;      /* spostato sopra la lettera */
+  right:185px;     /* distanza da destra per allinearsi alla A */
+  top:-28px;      /* spostato sopra la lettera */
   width:26px;
   height:26px;
   border:3px solid var(--gold);
