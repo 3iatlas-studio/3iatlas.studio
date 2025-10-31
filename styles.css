@@ -65,7 +65,7 @@ body{
   width:16px;
   height:16px;
   border:2px solid var(--gold);
-  border-radius:20%;
+  border-radius:50%;
   filter:drop-shadow(0 0 8px rgba(217,178,109,.55));
   animation:pulse 3s ease-in-out infinite;
 }
