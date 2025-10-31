@@ -60,21 +60,32 @@ body{
 /* piccolo globo/orbita accanto alla A */
 .logo-mark{
   position:absolute;
-  right:-16px; top:-6px;
-  width:24px; height:24px;
+  right:-26px;  /* spostato più a destra */
+  top:-22px;    /* spostato più in alto */
+  width:26px;
+  height:26px;
   border:3px solid var(--gold);
   border-radius:50%;
-  filter:drop-shadow(0 0 6px rgba(217,178,109,.55));
+  filter:drop-shadow(0 0 8px rgba(217,178,109,.55));
 }
 .logo-mark::before,
 .logo-mark::after{
   content:"";
-  position:absolute; left:-10px; top:10px;
-  width:14px; height:4px; border-radius:2px;
+  position:absolute;
+  left:-12px;
+  top:12px;
+  width:16px;
+  height:4px;
+  border-radius:2px;
   background:var(--gold);
   box-shadow:0 0 10px rgba(217,178,109,.8);
 }
-.logo-mark::after{ top:14px; width:9px; left:-6px; opacity:.85 }
+.logo-mark::after{
+  top:16px;
+  width:10px;
+  left:-7px;
+  opacity:.85;
+}
 
 /* Tagline */
 .hero__title{
