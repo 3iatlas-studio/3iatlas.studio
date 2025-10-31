@@ -143,10 +143,10 @@ body{
   }
 
   .logo-mark {
-    top: -55px;                /* sposta più in alto */
-    right: 72px;               /* più verso il centro */
-    width: 36px;
-    height: 36px;
+    top: -15px;                /* sposta più in alto */
+    right: 62px;               /* più verso il centro */
+    width: 26px;
+    height: 26px;
   }
 
   .logo-mark::before,
