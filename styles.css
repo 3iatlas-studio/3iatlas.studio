@@ -135,3 +135,30 @@ body{
   .hero__title{ font-size:clamp(22px,3.2vw,30px) }
   .works-grid{ gap:22px; padding:0 20px }
 }
+/* 🔧 Versione desktop */
+@media (min-width: 768px) {
+  .logo {
+    font-size: 3.5rem;         /* aumenta la dimensione generale */
+    letter-spacing: 3px;
+  }
+
+  .logo-mark {
+    top: -55px;                /* sposta più in alto */
+    right: 72px;               /* più verso il centro */
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo-mark::before,
+  .logo-mark::after {
+    transform: rotate(-25deg); /* mantiene l’inclinazione */
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;         /* ingrandisce il titolo */
+  }
+
+  .hero p {
+    font-size: 1.3rem;         /* migliora leggibilità */
+  }
+}
